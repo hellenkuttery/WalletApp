@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 id="title">NET<span>FLIX</span></h1>
+        <h3 id="description">
+          Thank you for signing up at Netflix. Tell us more about your self
+        </h3>
+      </header>
+      <div class="survey_form">
+        <form action="result.html">
+          <!-- ---------------------------NAME--------------------------------- -->
+          <div class="input-box">
+            <label for="name">Name</label>
+            <br />
+            <input
+              type="text"
+              name="Name"
+              placeholder="enter your name"
+              id="name"
+              required 
+            />
+          </div>
+
+          <!-- ---------------------------AGE----------------------------------- -->
+          <div class="input-box">
+            <label for="age">Age</label>
+            <br />
+            <input type="number" name="Age" id="age" placeholder="age" required />
+          </div>
+
+          <!-- ---------------------------EMAIL-------------------------------- -->
+          <div class="input-box">
+            <label for="email">Email</label>
+            <br />
+            <input
+              type="email"
+              name="Email"
+              id="email"
+              placeholder="enter your Email"
+              required 
+            />
+          </div>
+
+          <!-- -----------------------CONTENT------------------------------- -->
+
+          <div class="input-box">
+            <label for="content">Content Type</label>
+            <br />
+            <select name="Content" id="content">
+              <option value="movie">Movie</option>
+              <option value="Series">Series</option>
+            </select>
+          </div>
+
+          <!-- -------------------------MOVIE TYPE--------------------------- -->
+          <div class="input-box">
+            <label for="">Movie Type</label>
+            <br />
+            <!-- ----------------------------------------------------------------------- -->
+            <input
+              type="checkbox"
+              name="Movie Type"
+              id="comedy"
+              value="comedy"
+            />
+            <label for="comedy">Comedy</label>
+            <br />
+            <!-- ----------------------------------------------------------------------- -->
+            <input
+              type="checkbox"
+              name="Movie Type"
+              id="action"
+              value="action"
+            />
+            <label for="action">Action</label>
+            <br />
+            <!-- ----------------------------------------------------------------------- -->
+            <input
+              type="checkbox"
+              name="Movie Type"
+              id="romance"
+              value="romance"
+            />
+            <label for="romance">Romance</label>
+          </div>
+          <!-- ------------------------GENDER----------------------------- -->
+
+          <div class="input-box">
+            <label for="">Gender</label>
+            <br />
+            <!-- ----------------------------------------------------------------------- -->
+            <input type="radio" name="gender" id="male" value="male" />
+            <label for="male">Male</label>
+            <br />
+            <!-- ----------------------------------------------------------------------- -->
+            <input type="radio" name="gender" id="female" value="female" />
+            <label for="female">Female</label>
+            <br />
+            <!-- ----------------------------------------------------------------------- -->
+            <input type="radio" name="gender" id="other" value="other" />
+            <label for="other">Other</label>
+          </div>
+
+          <!-- -------------------------------COMMENT---------------------- -->
+          <div class="input-box">
+            <label for="feedback">Feed back</label>
+            <br />
+            <textarea
+              name="Feedback"
+              id="feedback"
+              placeholder="any comment"
+            ></textarea>
+          </div>
+
+          <!-- --------------------------SUBMIT---------------------------------- -->
+          <div class="form_submit">
+            <input type="submit" value="Gönder" class="form-button" />
+          </div>
+          <!-- ----------------------------------------------------------------------- -->
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
