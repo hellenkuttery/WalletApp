@@ -3,11 +3,29 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Expense & income</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      href="./images/Wallet_App.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
   </head>
@@ -20,76 +38,93 @@
         <img src="./images/Wallet_App.png" alt="" width="80px" />
       </div>
       <!-- -----------------------INCOME-------------------------------- -->
-      <div
-        class="income bg-success-subtle p-1 w-75 flex-column align-items-center justify-content-center rounded-3 m-2"
-      >
-        <div class="text-center">
-          <h5>INCOME</h5>
-        </div>
-        <div class="d-flex align-items-center justify-content-center">
-          <input
-            type="text"
-            class="form-control w-50 p-2"
-            id="exampleFormControlInput1"
-            placeholder="Enter your income"
-          />
-
-          <button type="button" class="btn btn-danger w-25 h-50 p-2 m-3">
-            ADD
-          </button>
-        </div>
-      </div>
-      <!-- ----------------------EXPENSES------------------------------------------ -->
-      <div
-        class="income bg-warning-subtle w-75 flex-column align-items-center justify-content-center rounded-3 py-4 border border-1 my-2"
-      >
-        <div class="text-center">
-          <h5>EXPENSES FORM</h5>
-        </div>
+      <form action="" id="ekleFormu" class="w-75">
         <div
-          class="d-flex align-items-center justify-content-center flex-column"
+          class="income bg-success-subtle p-1  flex-column align-items-center justify-content-center rounded-3 m-2"
         >
-          <div class="d-flex align-items-center justify-content-center w-75">
-            <div class="form-floating my-3 me-1 w-100">
-              <input
-                type="email"
-                class="form-control"
-                id="floatingInput"
-                placeholder="name@example.com"
-              />
-              <label for="floatingInput">Enter Date</label>
-            </div>
+          <div class="text-center">
+            <h5>INCOME</h5>
+          </div>
+          <div class="d-flex align-items-center justify-content-center">
+            <input
+              type="text"
+              class="form-control w-50 p-2"
+              id="gelirInput"
+              placeholder="Enter your income"
+            />
 
-            <div class="form-floating my-3 me-1 w-100">
-              <input
-                type="email"
-                class="form-control"
-                id="floatingInput"
-                placeholder="name@example.com"
-              />
-              <label for="floatingInput">Amount</label>
-            </div>
+            <button
+              type="submit"
+              id="ekle"
+              class="btn btn-danger w-25 h-50 p-2 m-3"
+            >
+              ADD
+            </button>
+            <button
+            type="reset"
+            id="temizle"
+            class="btn btn-danger w-25 h-50 p-2 m-3"
+          >
+            CLEAR FORM
+          </button>
+          </div>
+        </div>
+      </form>
+      <!-- ----------------------EXPENSES------------------------------------------ -->
+      <form action="" id="harcama-formu" class="w-75">
+        <div
+          class="income bg-warning-subtle  flex-column align-items-center justify-content-center rounded-3 py-4 border border-1 my-2"
+        >
+          <div class="text-center">
+            <h5>EXPENSES FORM</h5>
           </div>
           <div
-            class="d-flex align-items-center justify-content-center flex-column w-75"
+            class="d-flex align-items-center justify-content-center flex-column"
           >
-            <div class="form-floating my-2 me-2 w-100">
-              <input
-                type="email"
-                class="form-control"
-                id="floatingInput"
-                placeholder="name@example.com"
-              />
-              <label for="floatingInput">Expenses,Bills, </label>
+            <div class="d-flex align-items-center justify-content-center w-75">
+              <div class="form-floating my-3 me-1 w-100">
+                <input
+                  type="date"
+                  class="form-control "
+                  id="tarih"
+
+                />
+                <label for="floatingInput">Enter Date</label>
+              </div>
+
+              <div class="form-floating my-3 me-1 w-100">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="miktar"
+                
+                />
+                <label for="floatingInput">Amount</label>
+              </div>
             </div>
-            <button type="button" class="btn btn-danger w-100 p-2 m-3">
-              SAVE
-            </button>
+            <div
+              class="d-flex align-items-center justify-content-center flex-column w-75"
+            >
+              <div class="form-floating my-2 w-100">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="harcamaAlani"
+               
+                />
+                <label for="floatingInput">Expenses,Bills </label>
+              </div>
+              <button type="submit" class="btn btn-danger w-100 p-2 m-3">
+                SAVE
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </form>
       <!-- --------------------------LIST------------------------------------- -->
-      <div class="expensesList my-2 w-100 bg-warning-subtle p-3 border border-1 rounded-3">
+      <div
+        class="expensesList my-2 w-100 bg-warning-subtle p-3 border border-1 rounded-3"
+      >
         <table class="table table-secondary">
           <thead class="table-success">
             <tr>
@@ -99,42 +134,34 @@
               <th scope="col">Process</th>
             </tr>
           </thead>
-          <tbody class="table-group-divider">
-            <tr>
+          <tbody class="harcamaTablosu">
+            <!-- <tr>
               <th scope="row">1</th>
               <td>Mark</td>
               <td>Otto</td>
               <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
+            </tr> -->
           </tbody>
         </table>
       </div>
       <!-- ----------------------------------------------------------------------- -->
-      <div class="expensesList my-2 w-75 bg-warning-subtle p-3 border border-1 rounded-3">
+      <div
+        class="expensesList my-2 w-75 bg-warning-subtle p-3 border border-1 rounded-3"
+      >
         <table class="table table-secondary table-bordered">
-        
           <tbody class="table-group-divider">
             <tr>
               <th scope="row" class="w-25">Income:</th>
-              <td>Mark</td>
-             
+              <td id="gelirGoster"></td>
             </tr>
             <tr>
               <th scope="row" class="w-25">Expense:</th>
-              <td>Jacob</td>
-             
+              <td id="harcamaGoster"></td>
             </tr>
             <tr>
-                <th scope="row" class="w-25">Your money:</th>
-                <td>Jacob</td>
-               
-              </tr>
+              <th scope="row" class="w-25">Your money:</th>
+              <td id="kalanGoster"></td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -152,8 +179,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<script src="app.js">
-
-</script>
+    <script src="app.js"></script>
   </body>
 </html>
