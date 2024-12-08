@@ -40,5 +40,5 @@ This assignment will help students practice their JavaScript skills by building 
 - JS
 
 ## Live 
-[Live Guess the number Page](https://hellenkuttery.github.io/WalletApp/)
+[Expenses&Income Project Live Page](https://hellenkuttery.github.io/WalletApp/)
 
