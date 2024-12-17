@@ -1,7 +1,7 @@
 #  Expenses & Income Project
 
 ## Description
-This assignment will help students practice their JavaScript skills by building a simple expense tracker application. This application allows users to keep track of their income and expenses and displays a summary of their financial status. 
+This application allows users to keep track of their income and expenses and displays a summary of their financial status. 
 
 ## Problem Statement
 
